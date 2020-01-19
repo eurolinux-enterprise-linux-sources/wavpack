@@ -1,0 +1,35 @@
+diff -up wavpack-4.60.1/man/wavpack.1.manpages wavpack-4.60.1/man/wavpack.1
+--- wavpack-4.60.1/man/wavpack.1.manpages	2009-12-01 05:26:36.000000000 +0100
++++ wavpack-4.60.1/man/wavpack.1	2013-07-08 17:34:44.356411775 +0200
+@@ -136,6 +136,16 @@ calculate average and peak quantization
+ don\'t recode passed tags from local encoding to UTF\-8, assume they are in UTF\-8 already
+ .RE
+ .PP
++\fB\-o \fR\fB\fIOUTFILE\fR\fR
++.RS 4
++specify output filename (only if single source file) or target directory (must exist)
++.RE
++.PP
++\fB\-\-optimize\-mono\fR
++.RS 4
++optimization for stereo files that are really mono (result may be incompatible with very old decoders)
++.RE
++.PP
+ \fB\-\-pair\-unassigned\-chans\fR
+ .RS 4
+ encode unassigned channels into stereo pairs
+diff -up wavpack-4.60.1/man/wvunpack.1.manpages wavpack-4.60.1/man/wvunpack.1
+--- wavpack-4.60.1/man/wvunpack.1.manpages	2009-12-01 05:26:38.000000000 +0100
++++ wavpack-4.60.1/man/wvunpack.1	2013-07-08 17:38:20.731709579 +0200
+@@ -86,6 +86,11 @@ calculate and display MD5 signature; ver
+ leave extracted text tags in UTF\-8 encoding during extraction or display
+ .RE
+ .PP
++\fB\-o \fR\fB\fIOUTFILE\fR\fR
++.RS 4
++specify output filename (only if single source file) or target directory (must exist)
++.RE
++.PP
+ \fB\-q\fR
+ .RS 4
+ quiet (keep console output to a minimum)

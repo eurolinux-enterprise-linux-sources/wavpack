@@ -1,0 +1,13 @@
+diff -up wavpack-4.60.1/cli/md5.c.strict_aliasing wavpack-4.60.1/cli/md5.c
+--- wavpack-4.60.1/cli/md5.c.strict_aliasing	2009-12-01 05:24:52.000000000 +0100
++++ wavpack-4.60.1/cli/md5.c	2013-01-03 18:38:00.647181420 +0100
+@@ -151,8 +151,7 @@ void MD5Final(digest, ctx)
+     byteReverse(ctx->in, 14);
+ 
+     /* Append length in bits and transform */
+-    ((uint32 *) ctx->in)[14] = ctx->bits[0];
+-    ((uint32 *) ctx->in)[15] = ctx->bits[1];
++    memcpy(ctx->in + 14 * sizeof (uint32), ctx->bits, 2 * sizeof (uint32));
+ 
+     MD5Transform(ctx->buf, (uint32 *) ctx->in);
+     byteReverse((unsigned char *) ctx->buf, 4);
