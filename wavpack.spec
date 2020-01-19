@@ -1,7 +1,7 @@
 Name:		wavpack
 Summary:	A completely open audiocodec
 Version:	4.60.1
-Release:	9%{?dist}
+Release:	7%{?dist}
 License:	BSD
 Group:		Applications/Multimedia
 Url:		http://www.wavpack.com/
@@ -66,12 +66,6 @@ rm -rf %{buildroot}
 %doc ChangeLog README doc/*
 
 %changelog
-* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 4.60.1-9
-- Mass rebuild 2014-01-24
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 4.60.1-8
-- Mass rebuild 2013-12-27
-
 * Mon Jul 08 2013 Miroslav Lichvar <mlichvar@redhat.com> 4.60.1-7
 - Add missing options to man pages
 
